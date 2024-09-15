@@ -7,50 +7,164 @@
     <meta name="keywords" content="Professional Profile, Skills, Projects, Certifications, Awards, Hackathons">
     <meta name="author" content="Your Name">
     <title>Professional Profile</title>
-
     <!-- Bootstrap CDN for CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
         }
 
         .navbar {
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
 
-        .languages {
-            text-align: right;
+        .video-container {
+            margin: 30px auto;
+            max-width: 97vw;
+            position: relative;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
         }
 
         h1, h2, h3, h4, h5 {
             margin-bottom: 20px;
         }
 
-        .skills-list {
-            list-style-type: none;
-            padding: 0;
+        .dropdown-menu {
+            display: none;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            margin-top: 5px;
         }
 
-        .skills-list li {
-            background-color: #f8f9fa;
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .nav-link {
+            cursor: pointer;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu .row {
+            margin: 0;
+        }
+
+        .dropdown-menu img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
             padding: 10px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 1rem;
+            color: #333;
             margin: 5px 0;
+        }
+
+        .footer-column img {
+            width: 100%;
+            height: auto;
+        }
+
+        .centered-text {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .centered-text-translation {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 1em;
+        }
+
+        .feed {
+            margin-top: 40px;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .post {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
             border-radius: 5px;
         }
 
-        .video-content {
-            margin: 20px 0;
+        .post .timestamp {
+            color: #888;
+            font-size: 0.9em;
         }
 
-        .projects, .awards, .courses {
-            margin-bottom: 30px;
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                margin-left: auto;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column {
+                flex: 1;
+                padding: 10px;
+            }
         }
 
-        footer {
-            text-align: center;
-            margin-top: 30px;
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 1.5rem;
+            }
+
+            .video-container {
+                margin: 15px auto;
+            }
+
+            .centered-text {
+                font-size: 1.5rem;
+            }
+
+            .centered-text-translation {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -59,135 +173,176 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">My Profile</a>
+        <a class="navbar-brand main-heading" href="#">Profile</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#videoContent">Video Content</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mediaFeed">Media Feed</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutMe">About Me</a></li>
+            </ul>
+        </div>
+        <form id="search" class="d-flex ms-3">
+            <input type="text" id="searchBar" class="form-control me-2" placeholder="Search...">
+            <button type="submit" class="btn btn-outline-primary">Search</button>
+        </form>
+        <div id="searchResults" class="mt-2"></div>
+    </div>
+</nav>
+
+<!-- Skills and Other Dropdowns -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="skillsLink">Skills</a>
+                    <div class="dropdown-menu">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./web1.png" alt="Skills" class="img-fluid">
+                            </div>
+                            <div class="col-md-4">
+                                <h6><u>Soft Skills</u></h6>
+                                <ul>
+                                    <li>Creativity</li>
+                                    <li>Time Management</li>
+                                    <li>Communication</li>
+                                    <li>Adaptability</li>
+                                    <li>Attentive</li>
+                                    <li>Critical Thinking</li>
+                                    <li>Patience</li>
+                                    <li>Teamwork</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><u>Hard Skills</u></h6>
+                                <ul>
+                                    <li>Version Control</li>
+                                    <li>Programming languages</li>
+                                    <li>Web Development</li>
+                                    <li>Basic AI</li>
+                                    <li>SDLC</li>
+                                    <li>Problem Solving</li>
+                                    <li>Database Systems</li>
+                                    <li>Data Structures and Algorithms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="projectsLink">Projects</a>
+                    <div class="dropdown-menu">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="./web2.png" alt="Projects" class="img-fluid">
+                            </div>
+                            <div class="col-md-4">
+                                <h6><u>Projects</u></h6>
+                                <ul>
+                                    <li>Ludo</li>
+                                    <li>Quranic Verses</li>
+                                    <li>Sapphire Website</li>
+                                    <li>Tic Tac Toe</li>
+                                    <li>Chess</li>
+                                    <li>Paint Brush</li>
+                                    <li>Parents Guide App</li>
+                                    <li>Calculator</li>
+                                    <li>Snake Game</li>
+                                    <li>Gomoko</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><u>Date and Time</u></h6>
+                                <ul>
+                                    <li>2 semester (ITU)</li>
+                                    <li>4 semester (CEW)</li>
+                                    <li>3 semester (CEW)</li>
+                                    <li>3 semester (CEW)</li>
+                                    <li>3 semester (CEW)</li>
+                                    <li>3 semester (CEW)</li>
+                                    <li>4 semester (CEW)</li>
+                                    <li>2 semester (ITU)</li>
+                                    <li>4 semester (CEW)</li>
+                                    <li>3 semester (CEW)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more dropdown items as needed -->
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Language Selection -->
-<div class="container">
-    <div class="languages">
-        <select>
-            <option value="en">English</option>
-            <option value="ar">Arabic</option>
-            <option value="ur">Urdu</option>
-            <option value="fr">French</option>
-        </select>
-    </div>
-</div>
-
-<!-- About Section -->
-<section id="about" class="container">
-    <h1>About Me</h1>
-    <p>Welcome to my professional profile! I am a skilled developer with expertise in both soft and hard skills. I have a passion for technology, problem-solving, and building innovative projects.</p>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="container">
-    <h2>Skills</h2>
-    <h4>Soft Skills</h4>
-    <ul class="skills-list">
-        <li>Communication</li>
-        <li>Teamwork</li>
-        <li>Leadership</li>
-        <li>Problem-Solving</li>
-    </ul>
-
-    <h4>Hard Skills</h4>
-    <ul class="skills-list">
-        <li>Web Development (HTML, CSS, JavaScript)</li>
-        <li>Python Programming</li>
-        <li>Data Analysis</li>
-        <li>Cloud Computing</li>
-    </ul>
-</section>
-
-<!-- Video Content -->
-<section id="videos" class="container video-content">
-    <h2>Video Content</h2>
-    <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/your-video-id" title="YouTube video" allowfullscreen></iframe>
+<!-- Main Content -->
+<section id="introduction">
+    <div class="container mt-4">
+        <h2 class="main-heading">Introduction</h2>
+        <p>Professional with expertise in web development, programming, and project management.</p>
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="container projects">
-    <h2>Projects</h2>
-    <ul>
-        <li>Project 1: E-Commerce Website - <em>Date: Jan 2024</em></li>
-        <li>Project 2: Machine Learning Model for Predicting Sales - <em>Date: Dec 2023</em></li>
-        <li>Project 3: Mobile App for Mental Health Awareness - <em>Date: Oct 2023</em></li>
-    </ul>
+<section id="videoContent" class="video-container">
+    <h2 class="centered-text">Video Introduction</h2>
+    <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
 </section>
 
-<!-- Awards, Certifications & Hackathons -->
-<section id="certifications" class="container awards">
-    <h2>Awards & Certifications</h2>
-    <ul>
-        <li>Google Cloud Certified Professional - <em>Date: Nov 2023</em></li>
-        <li>Hackathon Winner - Smart City Solutions - <em>Date: Sep 2023</em></li>
-        <li>Leadership Training - Advanced Management Skills - <em>Date: Aug 2023</em></li>
-    </ul>
-</section>
-
-<!-- Short Courses Section -->
-<section class="container courses">
-    <h2>Short Courses</h2>
-    <ul>
-        <li>Introduction to Machine Learning - <em>Duration: 6 weeks</em></li>
-        <li>Web Design & Development - <em>Duration: 8 weeks</em></li>
-        <li>Cloud Computing Fundamentals - <em>Duration: 5 weeks</em></li>
-    </ul>
-</section>
-
-<!-- Degrees Program Section -->
-<section class="container degrees">
-    <h2>Degree Programs</h2>
-    <ul>
-        <li>Bachelor of Science in Computer Science - <em>2020-2024</em></li>
-        <li>Master of Data Science (Ongoing)</li>
-    </ul>
-</section>
-
-<!-- Social Media Feed -->
-<section class="container">
-    <h2>Social Media Feed</h2>
-    <div class="ratio ratio-1x1">
-        <iframe src="https://twitter.com/your-twitter-handle" title="Twitter feed" allowfullscreen></iframe>
+<section id="education">
+    <div class="container mt-4">
+        <h2 class="main-heading">Education</h2>
+        <p>Details about educational background and achievements.</p>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="container">
-    <h2>Contact Information</h2>
-    <p>Email: your.email@example.com</p>
-    <p>Phone: +123-456-7890</p>
+<section id="mediaFeed" class="feed">
+    <h2 class="centered-text">Media Feed</h2>
+    <div class="post">
+        <p class="timestamp">Posted on: 15 September 2024</p>
+        <p>Example post content goes here.</p>
+    </div>
+    <!-- More posts -->
+</section>
 
-    <h3>Social Media</h3>
-    <ul>
-        <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-        <li><a href="https://github.com/yourgithub">GitHub</a></li>
-        <li><a href="https://twitter.com/yourtwitter">Twitter</a></li>
-    </ul>
+<section id="aboutMe">
+    <div class="container mt-4">
+        <h2 class="main-heading">About Me</h2>
+        <p>Personal background and interests.</p>
+    </div>
 </section>
 
 <!-- Footer -->
-<footer class="container">
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+<footer class="footer">
+    <div class="footer-column">
+        <h3>Links</h3>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+    <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Address: Your Address</p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </div>
+    <div class="footer-column">
+        <h3>Social Media</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+    </div>
 </footer>
 
-<!-- Bootstrap JS for interactivity -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
