@@ -131,6 +131,7 @@
     }
 
 </style>
+
 <title>Display Bismillah in Arabic</title>
 <style>
     .centered-text {
@@ -142,8 +143,27 @@
         text-align: center;
         font-weight: bold;
         font-size: 1em;
+        margin-bottom: 1em;
     }
 </style>
+
+<title>Social Media Feed</title>
+    <style>
+        .feed {
+            margin-top: 40px;
+            width: 60%;
+        }
+        .post {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .post .timestamp {
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
 
 </head>
 <body>
@@ -307,9 +327,19 @@
     شُروع اَللہ کے پاک نام سے جو بڑا مہر بان نہایت رحم والا ہے
 </div>
 
+<!--Introduction-->
+<div id="footer-column-head"><h3><ul><b>Introduction:</b></ul></h3></div>
+<div><b>Myself:</b>
+<p>Hello! My name is Afia Naseem, and I am currently a Computer Science student at ITU University, where I am in my fifth semester. I am passionate about exploring the ever-evolving world of technology and coding.</p>
+<b>Hobbies:</b>
+<p>Outside of my academic pursuits, I enjoy a range of hobbies that keep me engaged and inspired. These include cooking, where I love experimenting with new recipes, listening to and creating music, and immersing myself in good books and movies. Each of these activities provides a creative outlet and helps me balance my technical studies with a rich array of personal interests.</p>
+<b>Interests:</b>
+<p>I have a deep interest in exploring new technologies, coding practices, and software development methodologies. My studies in Computer Science fuel my curiosity about emerging tech trends and innovations.</p>
+</div>
+
 <!-- Video Content -->
 <section id="videoContent" class="video-container">
-    <h2>Video Content</h2>
+    <h2><b>Video Content</b></h2>
     <div class="ratio ratio-16x9">
         <iframe src="https://www.youtube.com/embed/sVPYIRF9RCQ?autoplay=1&loop=1&mute=1&playlist=sVPYIRF9RCQ" title="YouTube video" allowfullscreen></iframe>
     </div>
@@ -345,6 +375,21 @@
     </div>
 </div>
 
+<!--Feed Post-->
+<div id="footer-column-head"><h3><ul><b>Media Feed:</b></ul></h3></div>
+<div id="space"></div>
+<div class="feed" id="mediaFeed">
+    <div class="post">
+        <div>Afia Naseem</div>
+        <div class="timestamp">September 15, 2024</div>
+        <p>Happy Coding!</p>
+    </div>
+    <div class="post">
+        <div>Azka Tahir</div>
+        <div class="timestamp">September 14, 2024</div>
+        <p>Check out Web development trends.</p>
+    </div>
+</div>
 
     <!-- About Me -->
 <div class="footer" id="aboutMe">
