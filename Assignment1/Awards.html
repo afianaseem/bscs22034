@@ -11,88 +11,111 @@
     <!-- Bootstrap CDN for CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Page</title>
-    <style>
-    .color{
-        background-color:aliceblue;
-    }
-    </style>
-    
-    
+
+
+
+ <!-- Bootstrap CDN for CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <title>Page</title>
+ <style>
+ .color{
+     background-color:aliceblue;
+ }
+ </style>
+ 
+ 
 <title>Dropdown Menu Example</title>
 <style>
-    .dropdown-menu {
-        display: none;
-        background-color: white;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        padding: 12px 16px;
-        z-index: 1;
-        margin-top: 40px;
-    }
+ .dropdown-menu {
+     display: none;
+     background-color: white;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     padding: 12px 16px;
+     z-index: 1;
+     margin-top: 40px;
+ }
 
-    .nav-item:hover .dropdown-menu {
-        display: block;
-    }
+ .nav-item:hover .dropdown-menu {
+     display: block;
+ }
 
-    .nav-link {
-        cursor: pointer;
-    }
+ .nav-link {
+     cursor: pointer;
+ }
 
-    .nav-item {
-        position: relative;
-        display: contents;
-    }
+ .nav-item {
+     position: relative;
+     display: contents;
+ }
 
-    .dropdown-menu .row {
-        margin: 0;
-    }
+ .dropdown-menu .row {
+     margin: 0;
+ }
 
-    .dropdown-menu h6 {
-        margin-top: 0;
-    }
+ .dropdown-menu h6 {
+     margin-top: 0;
+ }
 
-    .dropdown-menu img {
-        max-width: 100%;
-        height: auto;
-    }
-    .space{
-        margin: bottom 20px;;
-    }
+ .dropdown-menu img {
+     max-width: 100%;
+     height: auto;
+ }
+ .space{
+     margin: bottom 20px;;
+ }
 </style>
 
 </style>
 <title>Awards</title>
 <style>
-    .edit-heading{
-        background-color:bisque;
-        font-size: 20px;
+ .edit-heading{
+     background-color:bisque;
+     font-size: 20px;
+      text-align: center;
+ }
+ .edit-h1{
+     font-size: 40px;
+      text-align: center;    }
+      .edit-center{
          text-align: center;
-    }
-    .edit-h1{
-        font-size: 40px;
-         text-align: center;    }
-         .edit-center{
-            text-align: center;
-         }
-         .edit-cursor{
-            cursor: pointer;
-            color:lightcyan;
-         }
+      }
+      .edit-cursor{
+         cursor: pointer;
+         color:lightcyan;
+      }
 </style>
 
 <title>Three Images with Individual Headings and Paragraphs</title>
 <style>
-    .container1 {
+    .color {
+        background-color: aliceblue;
+    }
+    .space {
+        margin-bottom: 20px;
+    }
+    .edit-heading {
+        background-color: bisque;
+        font-size: 20px;
         text-align: center;
     }
-    .images1 {
+    .edit-h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .edit-center {
+        text-align: center;
+    }
+    .container1 {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 20px; 
     }
     .image-container1 {
-        width: 25%;
+        width: calc(33.333% - 20px); 
         text-align: center;
+        margin-bottom: 20px; 
     }
     .image-container1 img {
         width: 100%;
@@ -101,7 +124,6 @@
     .image-container1 h2 {
         font-size: 20px;
     }
-
     .image-container1 p {
         color: black;
         transition: color 0.3s ease;
@@ -109,104 +131,82 @@
     }
     .image-container1 p:hover {
         color: lightgrey;
-        font-size: 15px;
-
     }
 </style>
 
 <title>Space tab</title>
 <style>
-    .space{
-        margin-bottom: 40px;;
-    }
+ .space{
+     margin-bottom: 40px;;
+ }
 </style>
 
 <style>
-    @media (max-width: 768px) {
-        .navbar-toggler {
-            margin-left: auto;
-        }
-    
-        .footer {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-        .footer-column {
-            flex: 1;
-            padding: 10px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .main-heading {
-            font-size: 1.5rem;
-        }
-    
-        .video-container {
-            margin: 15px auto;
-        }
-    
-        .centered-text {
-            font-size: 1.5rem;
-        }
-    
-        .centered-text-translation {
-            font-size: 0.9rem;
-        }
-    }
-    </style>
+ @media (max-width: 768px) {
+     .navbar-toggler {
+         margin-left: auto;
+     }
+ 
+     .footer {
+         flex-direction: column;
+         text-align: center;
+     }
+ 
+     .footer-column {
+         flex: 1;
+         padding: 10px;
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .main-heading {
+         font-size: 1.5rem;
+     }
+ 
+     .video-container {
+         margin: 15px auto;
+     }
+ 
+     .centered-text {
+         font-size: 1.5rem;
+     }
+ 
+     .centered-text-translation {
+         font-size: 0.9rem;
+     }
+ }
+ </style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 </head>
 <body>
     <div class="color">
-    <div class="box1">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" id="skillsLink">Skills</a>
-                            <div class="dropdown-menu">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="./web1.png" alt="Skills" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h6><u>Soft Skills</u> </h6>
-                                        <ul>
-                                            <li>Creativity</li>
-                                            <li>Time Management</li>
-                                            <li>Communication</li>
-                                            <li>Adaptability</li>
-                                            <li>Attentive</li>
-                                            <li>Critical Thinking</li>
-                                            <li>Patience</li>
-                                            <li>Teamwork</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h6><u>Hard Skills</u></h6>
-                                        <ul>
-                                            <li>Version Control</li>
-                                            <li>Programming languages</li>
-                                            <li>Web Development</li>
-                                            <li>Basic AI</li>
-                                            <li>SDLC</li>
-                                            <li>Problem Solving</li>
-                                            <li>Database Systems</li>
-                                            <li>Data Stuctures and Algorithm</li>
-                                        </ul>
+        <div class="box1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" id="skillsLink">Skills</a>
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./web1.png" alt="Skills" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6><u>Soft Skills</u></h6>
+                                            <ul id="softSkillsList"></ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6><u>Hard Skills</u></h6>
+                                            <ul id="hardSkillsList"></ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-    
-                        <ul class="navbar-nav">
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="projectsLink">Projects</a>
                                 <div class="dropdown-menu">
@@ -216,174 +216,74 @@
                                         </div>
                                         <div class="col-md-4">
                                             <h6><u>Projects</u></h6>
-                                            <ul>
-                                                <li>Ludo</li>
-                                                <li>Quranic Verses</li>
-                                                <li>Sapphire Website</li>
-                                                <li>Tic Tac Toe</li>
-                                                <li>Chess</li>
-                                                <li>Paint Brush</li>
-                                                <li>Parents Guide App</li>
-                                                <li>Calculator</li>
-                                                <li>Snake Game</li>
-                                                <li>Gomoko</li>
-                                            </ul>
+                                            <ul id="projectsList"></ul>
                                         </div>
                                         <div class="col-md-4">
                                             <h6><u>Date and Time</u></h6>
-                                            <ul>
-                                                <li>2 semester (ITU)</li>
-                                                <li>4 semester (ITU)</li>
-                                                <li>last month (PNY Training)</li>
-                                                <li>1 semester (ITU)</li>
-                                                <li>2 semester (ITU)</li>
-                                                <li>1 semester (ITU)</li>
-                                                <li>4 semester (ITU)</li>
-                                                <li>1 semester (ITU)</li>
-                                                <li>1 semester (ITU)</li>
-                                                <li>2 semester (ITU)</li>
-                                            </ul>
+                                            <ul id="projectTimesList"></ul>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-    
-                        <li class="nav-item">
-                            <a class="nav-link" id="shortCoursesLink">Short Courses</a>
-                            <div class="dropdown-menu">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="./web3.png" alt="Short Courses" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h6><u>Short Courses</u> </h6>
-                                        <ul>
-                                            <li>Web Development</li>
-                                            <li>Python</li>
-                                            <li>Robotics</li>
-                                            <li>WordPress</li>
-                                            <li>Freelancing</li>
-                                            <li>Python</li>
-                                        </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" id="shortCoursesLink">Short Courses</a>
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./web3.png" alt="Short Courses" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6><u>Short Courses</u></h6>
+                                            <ul id="shortCoursesList"></ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>             
-                        <li class="nav-item">
-                            <a class="nav-link" id="degreeProgramLink">Degree Program</a>
-                            <div class="dropdown-menu">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="./web4.png" alt="Degree Program" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6><u>Programs</u> </h6>
-                                        <ul>
-                                            <li>Hackathon</li>
-                                            <li>Python</li>
-                                        </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="degreeProgramLink">Degree Program</a>
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="./web4.png" alt="Degree Program" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6><u>Programs</u></h6>
+                                            <ul id="degreeProgramsList"></ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>              
-                        <li class="nav-item">
-                            <a class="nav-link" id="awardLink">Awards / Certificates</a>
-                        </li>
-                    </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="awardLink">Awards / Certificates</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="edit-heading">
+                <div class="edit-h1">
+                    <h1 style="font-size:100px">Awards/Certificates</h1>
                 </div>
             </div>
-        </nav>
-      
-        <div class="space"></div>
-        <div class="space"></div>
-        <div class="space"></div>
-<!-- the awards heading -->
-<div class="edit-heading">
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="edit-center">  
+                <p style="font-size: 15px;">Following are the awards and certificates awarded so far.</p>
+            </div>
+            <div class="space"></div>
+            <div class="space"></div>
 
-<div class="edit-h1">
-    <h1 style="font-size:100px">Awards/Certificates</h1>
-</div>
-</div>
-<div class="space"></div>
-<div class="space"></div>
-<div class="edit-center">  
-      <p style="font-size: 15px;">Following are the awards and certificates awarded so far.</p></div>
-
-<div class="space"></div>
-<div class="space"></div>
-
-<div class="space"></div>
-<div class="space"></div>
-<div class="space"></div>
-
-
-<!-- CARDS  -->
-<div class="container1">
-    <div class="images1">
-        <div class="image-container1">
-            <img src="./cer1.jpg" alt="Image 1">
-            <h2>Kaar e Kamal</h2>
-            <p>In the heart of the welfare society, "Kaar-e-Kamal" stands as a beacon of transformative work, its achievements now immortalized by the certificate of recognition. This accolade celebrates not just the efforts, but the profound impact made on countless lives.            </p>
-        </div>
-        <div class="image-container1">
-            <img src="./cer2.JPG" alt="Image 1">
-            <h2>WordPress</h2>
-            <p>The completion of the WordPress course by DigiSkills is marked by a certificate that acknowledges newfound expertise in web development and design. This credential highlights both the dedication to mastering the platform and the readiness to create dynamic, professional websites.</p>
-        </div>
-        <div class="image-container1">
-            <img src="./cer3.JPG" alt="Image 1">
-            <h2>Freelancing</h2>
-            <p>The DigiSkills freelancing course culminates in a certificate that signifies a comprehensive grasp of the freelance landscape. This achievement not only validates skill acquisition but also opens doors to new opportunities in the world of independent work.</p>
+            <div class="container1" id="awardsContainer"></div>
+            <div class="space"></div>
+            <div class="space"></div>
         </div>
     </div>
-</div>
-<div class="space"></div>
-<div class="space"></div>
-<div class="space"></div>
-<div class="container1">
-    <div class="images1">
-        <div class="image-container1">
-            <img src="./cer4.JPG" alt="Image 1">
-            <h2>Character Building Society</h2>
-            <p>The seminar on CV making, hosted by the Character Building Society of ITU University, culminated in a certificate that underscores a refined ability to craft compelling resumes. This recognition highlights the skills gained in presenting professional strengths and achievements effectively.</p>
-        </div>
-        <div class="image-container1">
-            <img src="./cer5.JPG" alt="Image 1">
-            <h2>Python IBM certificate</h2>
-            <p>The IBM Python course, now marked by a certificate, signifies a solid foundation in programming with Python. This credential reflects both the mastery of coding principles and the readiness to tackle real-world problems with innovative solutions.</p>
-        </div>
-        <div class="image-container1">
-            <img src="./cer6.JPG" alt="Image 1">
-            <h2>Robotics</h2>
-            <p>The robotics course from PGC College, validated by a certificate, signifies a thorough understanding of robotic systems and their applications. This achievement highlights both the theoretical knowledge and practical skills acquired in advancing the field of robotics.</p>
-        </div>
-    </div>
-</div>
-<div class="space"></div>
-<div class="space"></div>
-<div class="space"></div>
-<div class="container1">
-    <div class="images1">
-        <div class="image-container1">
-            <img src="./cer7.JPG" alt="Image 1">
-            <h2>Microsoft Badge for Word</h2>
-            <p>The Microsoft Word Associate Badge , now recognized with a certificate, attests to a proficient grasp of foundational Microsoft technologies and best practices. This certification marks a significant milestone in demonstrating technical expertise and readiness for advanced IT challenges.</p>
-        </div>
-        <div class="image-container1">
-            <img src="./cer8.JPG" alt="Image 1">
-            <h2>Hackathon</h2>
-            <p>The hackathon exam hosted by LUMS University, now celebrated with a certificate, underscores innovative problem-solving and collaborative skills. This accolade reflects both the competitive spirit and technical prowess demonstrated during the event.</p>
-        </div>
-        <div class="image-container1">
-            <img src="./cer9.JPG" alt="Image 1">
-            <h2>Microsoft Office Specialist certificate</h2>
-            <p>The Microsoft Office Specialist , now certified, validates expert proficiency in Microsoft Office applications. This credential confirms advanced skills in leveraging Office tools for enhanced productivity and efficiency in professional tasks.</p>
-        </div>
-    </div>
-</div>
-<div class="space"></div>
-<div class="space"></div>
-    </div>
+
+<script src="Awards.js"></script>
 
 <script>
     document.getElementById("degreeProgramLink").addEventListener("click", function() {
@@ -402,6 +302,7 @@
         window.location.href = "Awards.html";
     });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
