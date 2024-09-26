@@ -10,163 +10,111 @@
     <!-- Bootstrap CDN for CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
+     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
         }
-        
-        .main-heading{
+        .main-heading {
             font-size: 40px;
-            font: bold;
+            font-weight: bold;
         }
-
-        .navbar {
-            margin-bottom: 0px;
-        }
-
         .video-container {
             margin-top: 30px;
-            width: 97vw;
+            width: 80vw;
             position: relative;
         }
-
         .video-container iframe {
-            left: 10px;
+            left: 5px;
             width: 100%;
         }
-
+        .image-container1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
         h1, h2, h3, h4, h5 {
             margin-bottom: 20px;
         }
-    </style>
+        .page-align {
+            padding: 0 50px;
+            margin: 0 20px;
+        }
+        .color {
+            background-color: aliceblue;
+        }
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .footer-column {
+            flex: 1;
+            padding: 0 10px;
+        }
+        .footer-column h3 {
+            font-size: 24px; 
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-<title>Page</title>
-<style>
-.color{
-    background-color:aliceblue;
-}
-</style>
-
-
-
-<title>Dropdown Menu Example</title>
-<style>
-    .dropdown-menu {
-        display: none;
-        background-color: white;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        padding: 12px 16px;
-        z-index: 1;
-        margin-top: 40px;
-    }
-
-    .nav-item:hover .dropdown-menu {
-        display: block;
-    }
-
-    .nav-link {
-        cursor: pointer;
-    }
-
-    .nav-item {
-        position: relative;
-        display: contents;
-    }
-
-    .dropdown-menu .row {
-        margin: 0;
-    }
-
-    .dropdown-menu h6 {
-        margin-top: 0;
-    }
-
-    .dropdown-menu img {
-        max-width: 100%;
-        height: auto;
-    }
-    .space{
-        margin: bottom 20px;;
-    }
-</style>
-
-<title>Footer Example</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    .footer {
-        display: flex;
-        padding: 20px 50px;
-        background-color: #f8f8f8;
-        border-top: 1px solid #ddd;
-        margin-top: 30px;
-    }
-    .footer-column {
-        flex: 1;
-        padding: 0 20px;
-    }
-    .footer-column h3 {
-        font-size: 40px;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
-    .footer-column p, .footer-column a {
-        font-size: 17px;
-        color: #333;
-        margin: 5px 0;
-    }
-    .footer-column img{
-        width: 550;
-        height: 250px;
-    }
-
-</style>
-
-<title>Education</title>
-<style>
-    .footer-column {
-        flex: 2;
-        padding: 20px 20px;
-    }
-    .footer-column h3 {
-        font-size: 40px;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
-    .footer-column-head{
-        font-size: 40px;
-    }
-
-</style>
-
-<title>Display Bismillah in Arabic</title>
-<style>
-    .centered-text {
-        background-color: beige;
-        text-align: center;
-        font-weight: bold;
-        font-size: 4em;
-    }
-    .centered-text-translation {
-        background-color: beige;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1em;
-        margin-bottom: 1em;
-    }
-</style>
-
-<title>Social Media Feed</title>
-    <style>
+        .footer-column img {
+            width: 100%;
+            height: auto;
+        }
+        .centered-text {
+            background-color: beige;
+            text-align: center;
+            font-weight: bold;
+            font-size: 4em;
+        }
+        .centered-text-translation {
+            background-color: beige;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        .dropdown-menu {
+            display: none; 
+            position: absolute; 
+            z-index: 1000; 
+            background-color: white; 
+            border: 1px solid #ccc; 
+            border-radius: 0.25rem; 
+            padding: 10px; 
+            min-width: 350px; 
+            max-height: 400px; 
+            overflow-y: auto; 
+        }
+        .nav-item:hover .dropdown-menu {
+            background-color: beige;
+            display: block; 
+        }
+        .dropdown-menu img {
+            width: 150px;
+            height: auto; 
+            margin-bottom: 10px; 
+        }
+        .nav-link {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .dropdown-menu h6 {
+            font-size: 1rem;
+        }
+        .dropdown-menu .row > div {
+            padding: 0 10px;
+        }
         .feed {
-            background-color:cornsilk;
-            margin-top: 40px;
+            background-color: cornsilk;
+            margin-top: 20px;
             width: 60%;
         }
         .post {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 5px;
             margin-bottom: 10px;
             border-radius: 5px;
         }
@@ -174,48 +122,46 @@
             color: #888;
             font-size: 0.9em;
         }
+        @media (max-width: 768px) {
+            .page-align {
+                padding: 0 20px; 
+            }
+        }
+        @media (max-width: 480px) {
+            .page-align {
+                padding: 15px 0px; 
+            }
+            .video-container {
+            margin-top: 30px;
+            width: 87vw;
+            position: relative;
+        }            
+        .centered-text {
+                font-size: 1.5em; 
+            }
+            .centered-text-translation {
+            font-size: 0.8em;
+        }
+        .footer {
+            padding: 5px;
+            margin-top: 10px;
+        }
+        .feed {
+            margin-top: 10px;
+            width: 83%;
+        }
+        .post {
+            padding: 2px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+        }
     </style>
-
-<style>
-@media (max-width: 768px) {
-    .navbar-toggler {
-        margin-left: auto;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-column {
-        flex: 1;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-heading {
-        font-size: 1.5rem;
-    }
-
-    .video-container {
-        margin: 15px auto;
-    }
-
-    .centered-text {
-        font-size: 1.5rem;
-    }
-
-    .centered-text-translation {
-        font-size: 0.9rem;
-    }
-}
-</style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand main-heading" href="#">Profile</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -237,7 +183,7 @@
         <div id="searchResults"></div>
         <script src="search.js"></script>
     </div>
-</nav>
+</nav> -->
 <div class="color">
 <div class="box1">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -392,10 +338,10 @@
         <div class="footer-column" id="shortCoursesContent"></div>
     </div>
 </div>
-
+<div class="page-align">
 <!--Introduction-->
 <div id="introduction">
-    <div id="footer-column-head"><h3><ul><b>Introduction:</b></ul></h3></div>
+    <div id="footer"><h3><ul><b>Introduction:</b></ul></h3></div>
     <b>Myself:</b>
     <p>Hello! My name is Afia Naseem, and I am currently a Computer Science student at ITU University, where I am in my fifth semester. I am passionate about exploring the ever-evolving world of technology and coding.</p>
     <b>Hobbies:</b>
@@ -415,7 +361,7 @@
     <!--Education-->
     <div class="footer" id="education"></div>
     <div id="education">
-        <div id="footer-column-head"><h3><ul><b>Education</b></ul></h3></div>
+        <div id="footer-column justify-content"><h3><ul><b>Education</b></ul></h3></div>
         <div class="footer-column justify-content">
             <h5><b> Technology University</b></h5>
             <b>Duration:</b>2022-present
@@ -443,9 +389,9 @@
     </div>
     
     <!--Feed Post-->
-    <div id="footer-column-head"><h3><ul><b>Media Feed:</b></ul></h3></div>
-    <div id="space"></div>
-    <div class="feed" id="mediaFeed">
+    <div id="footer-column-head page-align"><h3><ul><b>Media Feed:</b></ul></h3></div>
+    <div id="page-align"></div>
+    <div class="feed page-align" id="mediaFeed">
         <div class="post">
             <div>Afia Naseem</div>
             <div class="timestamp">September 15, 2024</div>
@@ -459,8 +405,8 @@
     </div>
     </div>
         <!-- About Me -->
-    <div class="footer" id="aboutMe">
-        <div class="footer-column">
+    <div class="footer page-align" id="aboutMe">
+        <div class="footer-column page-align">
             <h3>About Me</h3>
             <p>Afia Naseem<br>
                ABC house , Gulshan-e-Ravi,<br>
@@ -477,6 +423,7 @@
     
 
 <script src="Assignment1.js"></script>
+</div>
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -497,7 +444,7 @@
     });
 </script>
 
-<script>
+<!-- <script>
 document.getElementById('search').addEventListener('submit', function(event) {
     event.preventDefault(); 
     const query = document.getElementById('searchBar').value.toLowerCase();
@@ -525,6 +472,6 @@ document.getElementById('search').addEventListener('submit', function(event) {
     }
 });
 
-</script>
+</script> -->
 </body>
 </html>

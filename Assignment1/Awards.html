@@ -11,298 +11,230 @@
     <!-- Bootstrap CDN for CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+        .page-align {
+            padding:0px  50px;
+            margin: 20px;
+        }
+        .color {
+            background-color: aliceblue;
+        }
+        .edit-heading {
+            background-color: bisque;
+            font-size: 20px;
+            text-align: center;
+        }
+        .edit-h1 {
+            font-size: 2.5rem; /* Responsive font size */
+            text-align: center;
+        }
+        .edit-center {
+            text-align: center;
+        }
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; 
+        }
+        .image-container1 {
+            flex: 1 1 calc(33.333% - 20px); /* Responsive flex item */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container1 img {
+            width: 100%;
+            height: auto;
+        }
+        .image-container1 h2 {
+            font-size: 1.5rem; /* Responsive heading size */
+        }
+        .image-container1 p {
+            color: black;
+            transition: color 0.3s ease;
+            font-size: 1rem; /* Responsive paragraph size */
+        }
+        .image-container1 p:hover {
+            color: lightgrey;
+        }
 
+        .dropdown-menu {
+            display: none; 
+            position: absolute; 
+            z-index: 1000; 
+            background-color: white; 
+            border: 1px solid #ccc; 
+            border-radius: 0.25rem; 
+            padding: 10px; 
+            min-width: 350px; 
+            max-height: 400px; 
+            overflow-y: auto; 
+        }
+        .nav-item:hover .dropdown-menu {
+            background-color: beige;
+            display: block; 
+        }
+        .dropdown-menu img {
+            width: 150px;
+            height: auto; 
+            margin-bottom: 10px; 
+        }
 
+        .dropdown-menu h6 {
+            font-size: 1rem;
+        }
 
- <!-- Bootstrap CDN for CSS -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        .dropdown-menu .row > div {
+            padding: 0 10px;
+        }
 
- <title>Page</title>
- <style>
- .color{
-     background-color:aliceblue;
- }
- </style>
- 
- 
-<title>Dropdown Menu Example</title>
-<style>
- .dropdown-menu {
-     display: none;
-     background-color: white;
-     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-     padding: 12px 16px;
-     z-index: 1;
-     margin-top: 40px;
- }
-
- .nav-item:hover .dropdown-menu {
-     display: block;
- }
-
- .nav-link {
-     cursor: pointer;
- }
-
- .nav-item {
-     position: relative;
-     display: contents;
- }
-
- .dropdown-menu .row {
-     margin: 0;
- }
-
- .dropdown-menu h6 {
-     margin-top: 0;
- }
-
- .dropdown-menu img {
-     max-width: 100%;
-     height: auto;
- }
- .space{
-     margin: bottom 20px;;
- }
-</style>
-
-</style>
-<title>Awards</title>
-<style>
- .edit-heading{
-     background-color:bisque;
-     font-size: 20px;
-      text-align: center;
- }
- .edit-h1{
-     font-size: 40px;
-      text-align: center;    }
-      .edit-center{
-         text-align: center;
-      }
-      .edit-cursor{
-         cursor: pointer;
-         color:lightcyan;
-      }
-</style>
-
-<title>Three Images with Individual Headings and Paragraphs</title>
-<style>
-    .color {
-        background-color: aliceblue;
-    }
-    .space {
-        margin-bottom: 20px;
-    }
-    .edit-heading {
-        background-color: bisque;
-        font-size: 20px;
-        text-align: center;
-    }
-    .edit-h1 {
-        font-size: 40px;
-        text-align: center;
-    }
-    .edit-center {
-        text-align: center;
-    }
-    .container1 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px; 
-    }
-    .image-container1 {
-        width: calc(33.333% - 20px); 
-        text-align: center;
-        margin-bottom: 20px; 
-    }
-    .image-container1 img {
-        width: 100%;
-        height: auto;
-    }
-    .image-container1 h2 {
-        font-size: 20px;
-    }
-    .image-container1 p {
-        color: black;
-        transition: color 0.3s ease;
-        font-size: 15px;
-    }
-    .image-container1 p:hover {
-        color: lightgrey;
-    }
-</style>
-
-<title>Space tab</title>
-<style>
- .space{
-     margin-bottom: 40px;;
- }
-</style>
-
-<style>
- @media (max-width: 768px) {
-     .navbar-toggler {
-         margin-left: auto;
-     }
- 
-     .footer {
-         flex-direction: column;
-         text-align: center;
-     }
- 
-     .footer-column {
-         flex: 1;
-         padding: 10px;
-     }
- }
- 
- @media (max-width: 480px) {
-     .main-heading {
-         font-size: 1.5rem;
-     }
- 
-     .video-container {
-         margin: 15px auto;
-     }
- 
-     .centered-text {
-         font-size: 1.5rem;
-     }
- 
-     .centered-text-translation {
-         font-size: 0.9rem;
-     }
- }
- </style>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                margin-left: auto;
+            }
+            .edit-h1 {
+                font-size: 2rem; 
+            }
+            .image-container1 {
+                flex: 1 1 calc(50% - 20px); 
+            }
+        }
+        @media (max-width: 480px) {
+            .edit-h1 {
+                font-size: 1.5rem; 
+            }
+            .image-container1 {
+                flex: 1 1 100%; 
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="color">
-        <div class="box1">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" id="skillsLink">Skills</a>
-                                <div class="dropdown-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="./web1.png" alt="Skills" class="img-fluid">
+            <div class="box1">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="skillsLink" role="button" aria-expanded="false">
+                                        Skills
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="./web1.png" alt="Skills" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4" style="padding-right: 15px;">
+                                                <h6><u>Soft Skills</u></h6>
+                                                <ul id="softSkillsList"></ul>
+                                            </div>
+                                            <div class="col-md-4" style="padding-left: 15px;">
+                                                <h6><u>Hard Skills</u></h6>
+                                                <ul id="hardSkillsList"></ul>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <h6><u>Soft Skills</u></h6>
-                                            <ul id="softSkillsList"></ul>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="projectsLink" role="button" aria-expanded="false">
+                                        Projects
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="./web2.png" alt="Projects" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4" style="padding-right: 15px;">
+                                                <h6><u>Projects</u></h6>
+                                                <ul id="projectsList"></ul>
+                                            </div>
+                                            <div class="col-md-4" style="padding-left: 15px;">
+                                                <h6><u>Date and Time</u></h6>
+                                                <ul id="projectTimesList"></ul>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <h6><u>Hard Skills</u></h6>
-                                            <ul id="hardSkillsList"></ul>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="shortCoursesLink" role="button" aria-expanded="false">
+                                        Short Courses
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="./web3.png" alt="Short Courses" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h6><u>Short Courses</u></h6>
+                                                <ul id="shortCoursesList"></ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="projectsLink">Projects</a>
-                                <div class="dropdown-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="./web2.png" alt="Projects" class="img-fluid">
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="degreeProgramLink" role="button" aria-expanded="false">
+                                        Degree Program
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="./web4.png" alt="Degree Program" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h6><u>Programs</u></h6>
+                                                <ul id="degreeProgramsList"></ul>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <h6><u>Projects</u></h6>
-                                            <ul id="projectsList"></ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h6><u>Date and Time</u></h6>
-                                            <ul id="projectTimesList"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="shortCoursesLink">Short Courses</a>
-                                <div class="dropdown-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="./web3.png" alt="Short Courses" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h6><u>Short Courses</u></h6>
-                                            <ul id="shortCoursesList"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="degreeProgramLink">Degree Program</a>
-                                <div class="dropdown-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="./web4.png" alt="Degree Program" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h6><u>Programs</u></h6>
-                                            <ul id="degreeProgramsList"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="awardLink">Awards / Certificates</a>
-                            </li>
-                        </ul>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="awardLink">Awards / Certificates</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="space"></div>
+                <div class="edit-heading">
+                    <div class="edit-h1">
+                        <h1>Awards/Certificates</h1>
                     </div>
                 </div>
-            </nav>
-
-            <div class="space"></div>
-            <div class="space"></div>
-            <div class="space"></div>
-            <div class="edit-heading">
-                <div class="edit-h1">
-                    <h1 style="font-size:100px">Awards/Certificates</h1>
+                <div class="edit-center">  
+                    <p>Following are the awards and certificates awarded so far.</p>
                 </div>
-            </div>
-            <div class="space"></div>
-            <div class="space"></div>
-            <div class="edit-center">  
-                <p style="font-size: 15px;">Following are the awards and certificates awarded so far.</p>
-            </div>
-            <div class="space"></div>
-            <div class="space"></div>
 
-            <div class="container1" id="awardsContainer"></div>
-            <div class="space"></div>
-            <div class="space"></div>
+                <div class="container1" id="awardsContainer"></div>
+            </div>
         </div>
     </div>
+        <div class="page-align">
 
     <script src="Awards.js"></script>
+    <script>
+        document.getElementById("degreeProgramLink").addEventListener("click", function() {
+            window.location.href = "DegreeProgram.html";
+        });
+        document.getElementById("shortCoursesLink").addEventListener("click", function() {
+            window.location.href = "ShortCourses.html";
+        });
+        document.getElementById("projectsLink").addEventListener("click", function() {
+            window.location.href = "Projects.html";
+        });
+        document.getElementById("skillsLink").addEventListener("click", function() {
+            window.location.href = "Skills.html";
+        });
+        document.getElementById("awardLink").addEventListener("click", function() {
+            window.location.href = "Awards.html";
+        });
+    </script>
 
-<script>
-    document.getElementById("degreeProgramLink").addEventListener("click", function() {
-        window.location.href = "DegreeProgram.html";
-    });
-    document.getElementById("shortCoursesLink").addEventListener("click", function() {
-        window.location.href = "ShortCourses.html";
-    });
-    document.getElementById("projectsLink").addEventListener("click", function() {
-        window.location.href = "Projects.html";
-    });
-    document.getElementById("skillsLink").addEventListener("click", function() {
-        window.location.href = "Skills.html";
-    });
-    document.getElementById("awardLink").addEventListener("click", function() {
-        window.location.href = "Awards.html";
-    });
-</script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

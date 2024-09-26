@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Profile - Skills, Projects, Certifications, Awards, and More">
+    <meta name="keywords" content="Professional Profile, Skills, Projects, Certifications, Awards, Hackathons">
+    <meta name="author" content="Your Name">
+    <title>Professional Profile</title>
+    <!-- Bootstrap CDN for CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0%;
+            font-family: Arial, sans-serif;
+        }
+        .main-heading {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .video-container {
+            margin-top: 30px;
+            width: 80vw;
+            position: relative;
+        }
+        .video-container iframe {
+            left: 5px;
+            width: 100%;
+        }
+        .image-container1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1, h2, h3, h4, h5 {
+            margin-bottom: 20px;
+        }
+        .page-align {
+            padding: 0px 50px;
+            margin: 0px 20px;
+        }
+        .color {
+            background-color: aliceblue;
+        }
+
+        .footer {
+            display: flex;
+            padding: 0px 10px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .footer-column {
+            flex: 1;
+            padding: 0 10px;
+        }
+        .footer-column h3 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .footer-column img {
+            width: 100%;
+            height: auto;
+        }
+        .centered-text {
+            background-color: beige;
+            text-align: center;
+            font-weight: bold;
+            font-size: 4em;
+        }
+        .centered-text-translation {
+            background-color: beige;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .dropdown-menu {
+            display: none; 
+            position: absolute; 
+            z-index: 1000; 
+            background-color: white; 
+            border: 1px solid #ccc; 
+            border-radius: 0.25rem; 
+            padding: 10px; 
+            min-width: 350px; 
+            max-height: 400px; 
+            overflow-y: auto; 
+        }
+        .nav-item:hover .dropdown-menu {
+            background-color: beige;
+            display: block; 
+        }
+        .dropdown-menu img {
+            width: 150px;
+            height: auto; 
+            margin-bottom: 10px; 
+        }
+        .nav-link {
+        font-weight: bold;
+        cursor: pointer;
+        }
+
+        .dropdown-menu h6 {
+            font-size: 1rem;
+        }
+
+        .dropdown-menu .row > div {
+            padding: 0 10px;
+        }
+
+        .feed {
+            background-color: cornsilk;
+            margin-top: 20px;
+            width: 60%;
+        }
+        .post {
+            border: 1px solid #ddd;
+            padding: 0px 2px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .post .timestamp {
+            color: #888;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .profile-card {
+                width: 90%;
+            }
+            .centered-text {
+            background-color: beige;
+            text-align: center;
+            font-weight: bold;
+            font-size: 4em;
+            }
+        }
+        @media (max-width: 480px) {
+            .profile-card {
+                width: 100%;
+            }
+        .centered-text {
+            background-color: beige;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        .video-container {
+            margin-top: 30px;
+            width: 75vw;
+            position: relative;
+        }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand main-heading" href="#">Profile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#videoContent">Video Content</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mediaFeed">Media Feed</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutMe">About Me</a></li>
+            </ul>
+        </div>
+        <form id="search">
+            <input type="text" id="searchBar" placeholder="Search....">
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResults"></div>
+        <script src="search.js"></script>
+    </div>
+</nav> -->
+<div class="color">
+<div class="box1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" id="skillsLink">Skills</a>
+                        <div class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="./web1.png" alt="Skills" class="img-fluid">
+                                </div>
+                                <div class="col-md-4">
+                                    <h6><u>Soft Skills</u> </h6>
+                                    <ul>
+                                        <li>Creativity</li>
+                                        <li>Time Management</li>
+                                        <li>Communication</li>
+                                        <li>Adaptability</li>
+                                        <li>Attentive</li>
+                                        <li>Critical Thinking</li>
+                                        <li>Patience</li>
+                                        <li>Teamwork</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6><u>Hard Skills</u></h6>
+                                    <ul>
+                                        <li>Version Control</li>
+                                        <li>Programming languages</li>
+                                        <li>Web Development</li>
+                                        <li>Basic AI</li>
+                                        <li>SDLC</li>
+                                        <li>Problem Solving</li>
+                                        <li>Database Systems</li>
+                                        <li>Data Stuctures and Algorithm</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="projectsLink">Projects</a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="./web2.png" alt="Projects" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6><u>Projects</u></h6>
+                                        <ul>
+                                            <li>Ludo</li>
+                                            <li>Quranic Verses</li>
+                                            <li>Sapphire Website</li>
+                                            <li>Tic Tac Toe</li>
+                                            <li>Chess</li>
+                                            <li>Paint Brush</li>
+                                            <li>Parents Guide App</li>
+                                            <li>Calculator</li>
+                                            <li>Snake Game</li>
+                                            <li>Gomoko</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6><u>Date and Time</u></h6>
+                                        <ul>
+                                            <li>2 semester (ITU)</li>
+                                            <li>4 semester (ITU)</li>
+                                            <li>last month (PNY Training)</li>
+                                            <li>1 semester (ITU)</li>
+                                            <li>2 semester (ITU)</li>
+                                            <li>1 semester (ITU)</li>
+                                            <li>4 semester (ITU)</li>
+                                            <li>1 semester (ITU)</li>
+                                            <li>1 semester (ITU)</li>
+                                            <li>2 semester (ITU)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="shortCoursesLink">Short Courses</a>
+                        <div class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="./web3.png" alt="Short Courses" class="img-fluid">
+                                </div>
+                                <div class="col-md-4">
+                                    <h6><u>Short Courses</u> </h6>
+                                    <ul>
+                                        <li>Web Development</li>
+                                        <li>Python</li>
+                                        <li>Robotics</li>
+                                        <li>WordPress</li>
+                                        <li>Freelancing</li>
+                                        <li>Python</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>             
+                    <li class="nav-item">
+                        <a class="nav-link" id="degreeProgramLink">Degree Program</a>
+                        <div class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="./web4.png" alt="Degree Program" class="img-fluid">
+                                </div>
+                                <div class="col-md-3">
+                                    <h6><u>Programs</u> </h6>
+                                    <ul>
+                                        <li>Hackathon</li>
+                                        <li>Python</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>              
+                    <li class="nav-item">
+                        <a class="nav-link" id="awardLink">Awards / Certificates</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <!-- Dua -->
+<div class="centered-text">
+    بسم الله الرحمن الرحيم
+</div>
+<div class="centered-text-translation">
+    شُروع اَللہ کے پاک نام سے جو بڑا مہر بان نہایت رحم والا ہے
+</div>
+    <div class="space"></div>
+    <div class="edit-heading">
+        <div class="edit-h1">
+        </div>
+    </div>
+    <div class="space"></div>
+
+    <div id="education">
+        <div id="footer-column-head">
+        </div>
+        <div class="footer-column" id="shortCoursesContent"></div>
+    </div>
+</div>
+<div class="page-align">
+
+<!--Introduction-->
+<div id="introduction">
+    <div id="footer-column-head"><h3><ul><b>Introduction:</b></ul></h3></div>
+    <b>Myself:</b>
+    <p>Hello! My name is Afia Naseem, and I am currently a Computer Science student at ITU University, where I am in my fifth semester. I am passionate about exploring the ever-evolving world of technology and coding.</p>
+    <b>Hobbies:</b>
+    <p>Outside of my academic pursuits, I enjoy a range of hobbies that keep me engaged and inspired. These include cooking, where I love experimenting with new recipes, listening to and creating music, and immersing myself in good books and movies. Each of these activities provides a creative outlet and helps me balance my technical studies with a rich array of personal interests.</p>
+    <b>Interests:</b>
+    <p>I have a deep interest in exploring new technologies, coding practices, and software development methodologies. My studies in Computer Science fuel my curiosity about emerging tech trends and innovations.</p>
+    </div>
+    
+    <!-- Video Content -->
+    <section id="videoContent" class="video-container">
+        <h2><b>Video Content</b></h2>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/sVPYIRF9RCQ?autoplay=1&loop=1&mute=1&playlist=sVPYIRF9RCQ" title="YouTube video" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <!--Education-->
+    <div class="footer" id="education"></div>
+    <div id="education">
+        <div id="footer-column-head"><h3><ul><b>Education</b></ul></h3></div>
+        <div class="footer-column justify-content">
+            <h5><b> Technology University</b></h5>
+            <b>Duration:</b>2022-present
+            <h5><b>CGPA:3.13</b></h5>
+            <b>Bachelor of Science in Computer Science</b>
+            <p>Introduction to Programming, Object-Oriented Programming, Calculus,
+                Differential Equations, Computer Organization and Architecture, Digital
+                Logic and Design, Communication skills, Basic Electronics.Operating System</p>
+        </div>
+        <div class="footer-column justify-content">
+                    <h5><b>Punjab Group of Colleges</b></h5>
+                    <b>Duration:</b>2020-2022
+                    <h5><b>Grade: A+</b></h5>
+                    <p>Matric: Physics, Computer , Mathematics </p>
+                        <p>Full Merit Based Scholarship</p>
+        </div>
+        <div class="footer-column justify-content"></div>
+                    <h5><b>American Lycetuff School</b></h5>
+                    <b>Duration:</b>2018-2020
+                    <h5><b>Grade: A+</b></h5>
+                    <p>Subjects: Biology, Physics, Chemistry, Mathematics, Computer Science,
+                        English, Urdu, Pakistan Studies, Islamiyat.</p>
+                        <p>Full Merit Based Scholarship</p>
+        </div>
+    </div>
+    
+    <!--Feed Post-->
+    <div id="footer-column-head page-align"><h3><ul><b>Media Feed:</b></ul></h3></div>
+    <div id="page-align"></div>
+    <div class="feed page-align" id="mediaFeed">
+        <div class="post">
+            <div>Afia Naseem</div>
+            <div class="timestamp">September 15, 2024</div>
+            <p>Happy Coding!</p>
+        </div>
+        <div class="post">
+            <div>Azka Tahir</div>
+            <div class="timestamp">September 14, 2024</div>
+            <p>Check out Web development trends.</p>
+        </div>
+    </div>
+    </div>
+        <!-- About Me -->
+    <div class="footer page-align" id="aboutMe">
+        <div class="footer-column page-align">
+            <h3>About Me</h3>
+            <p>Afia Naseem<br>
+               ABC house , Gulshan-e-Ravi,<br>
+               District Lahore, Lahore.
+            </p>
+            <p>Email: <a href="">bscs22034@itu.edu.pk</a></p>
+            <p>Phone: <a href="tel:+92xxxxxxxxx">+92(0)42 000-000-000</a></p>
+        </div>
+        <div class="footer-column img">
+                <img src="./myself.png" alt="Myself">
+        </div>
+    
+    </div>
+    
+
+<script src="Assignment1.js"></script>
+</div>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("degreeProgramLink").addEventListener("click", function() {
+        window.location.href = "DegreeProgram.html";
+    });
+    document.getElementById("shortCoursesLink").addEventListener("click", function() {
+        window.location.href = "ShortCourses.html";
+    });
+    document.getElementById("projectsLink").addEventListener("click", function() {
+        window.location.href = "Projects.html";
+    });
+    document.getElementById("skillsLink").addEventListener("click", function() {
+        window.location.href = "Skills.html";
+    });
+    document.getElementById("awardLink").addEventListener("click", function() {
+        window.location.href = "Awards.html";
+    });
+</script>
+
+<!-- <script>
+document.getElementById('search').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    const query = document.getElementById('searchBar').value.toLowerCase();
+    const resultsDiv = document.getElementById('searchResults');
+
+    const data = [
+        'Afia Naseem','Bachelor of Science in Computer Science','Subjects: Biology, Physics, Chemistry, Mathematics, Computer Science, English, Urdu, Pakistan Studies, Islamiyat.',
+        'Azka Tahir','Grade: A+','Happy Coding!','Check out Web development trends.',
+        'Hello! My name is Afia Naseem, and I am currently a Computer Science student at ITU University, where I am in my fifth semester. I am passionate about exploring the ever-evolving world of technology and coding.',
+        'Advanced JavaScript Techniques',
+        'Outside of my academic pursuits, I enjoy a range of hobbies that keep me engaged and inspired. These include cooking, where I love experimenting with new recipes, listening to and creating music, and immersing myself in good books and movies. Each of these activities provides a creative outlet and helps me balance my technical studies with a rich array of personal interests.'
+        ,'I have a deep interest in exploring new technologies, coding practices, and software development methodologies. My studies in Computer Science fuel my curiosity about emerging tech trends and innovations.'
+        ,'Video Content','CGPA:3.13','Introduction to Programming, Object-Oriented Programming, Calculus, Differential Equations, Computer Organization and Architecture, Digital Logic and Design, Communication skills, Basic Electronics.Operating System'
+        ,'Matric: Physics, Computer , Mathematics','Full Merit Based Scholarship',
+        'ABC house , Gulshan-e-Ravi','District Lahore, Lahore.','Email: bscs22034@itu.edu.pk'
+        ,'Phone: +92(0)42 000-000-000'
+    ];
+
+    const results = data.filter(item => item.toLowerCase().includes(query));
+
+    if (results.length > 0) {
+        resultsDiv.innerHTML = '<ul>' + results.map(item => `<li>${item}</li>`).join('') + '</ul>';
+    } else {
+        resultsDiv.innerHTML = 'No results found';
+    }
+});
+
+</script> -->
+</body>
+</html>
